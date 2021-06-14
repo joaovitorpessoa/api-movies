@@ -24,6 +24,5 @@
 git clone https://github.com/joaovitorpessoa/apimovies
 cd apimovies
 npm install
-yarn typeorm migration:run
 yarn start
 ```
