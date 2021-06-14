@@ -1,5 +1,13 @@
 # API para cadastro de filmes (teste técnico)
 
+## ☁️ Deploy
+
+- <a href="https://technic-exam-apimovies.herokuapp.com">Subi uma instância da aplicação no Heroku!</a>
+
+## Documentação
+
+- Documentação disponível em https://technic-exam-apimovies.herokuapp.com
+
 ## 🚀 Tecnologias utilizadas
 
 - NodeJS
