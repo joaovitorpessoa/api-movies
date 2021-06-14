@@ -7,7 +7,7 @@
 
 ## Documentação
 
-- Documentação disponível em https://technic-exam-apimovies.herokuapp.com
+- Documentação disponível em https://technic-exam-apimovies.herokuapp.com/api-docs
 
 ## 🚀 Tecnologias utilizadas
 
