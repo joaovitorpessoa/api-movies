@@ -1,4 +1,4 @@
-# API de Filmes (teste técnico)
+# API para cadastro de filmes (teste técnico)
 
 ## 🚀 Tecnologias utilizadas
 

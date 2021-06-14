@@ -1,0 +1,164 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API para cadastro de filmes",
+    "description": "API construida com propósitos de avaliação técnica.",
+    "version": "1.0.0",
+    "contact": {
+      "email": "joaovitorpessoa81@gmail.com"
+    }
+  },
+  "paths": {
+    "/movies": {
+      "post": {
+        "tags": ["Movies"],
+        "summary": "Cadastrar filme",
+        "description": "Deve-se utilizar variáveis do tipo number para o registro da avaliação e string para o título. Se o mesmo não possuir avaliação, é necessário atribuir o valor -1. Além disso, recomenda-se fortemente o uso de valores decimais de 0.0 até 10.0, seguindo o padrão adotado pelo IMDb (Internet Movie Database).",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "title": "Clube da Luta",
+                  "rating": 8.8
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Dado salvo com sucesso!"
+          },
+          "400": {
+            "description": "Tipagem de dado errada no JSON ou filme já cadastrado."
+          },
+          "500": {
+            "description": "Erro de formatação da requisição"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Listar filmes",
+        "description": "Fazer listagem de todos os filmes do banco de dados.",
+        "responses": {
+          "200": {
+            "description": "Listagem feita com sucesso!"
+          },
+          "500": {
+            "description": "Erro interno relacionado ao ORM"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Movies"],
+        "summary": "Atualizar filme",
+        "description": "Para realizar a atualização de dados é necessário informar o título antigo, o novo título e o novo valor da avaliação",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "oldTitle": {
+                    "type": "string"
+                  },
+                  "newTitle": {
+                    "type": "string"
+                  },
+                  "newRating": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "oldTitle": "Clube da Luta",
+                  "newTitle": "O Poderoso Chefão",
+                  "newRating": 9.2
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Dado modificado com sucesso!"
+          },
+          "400": {
+            "description": "Tipagem de dado errada no JSON ou filme inexistente"
+          },
+          "404": {
+            "description": "Filme não encontrado!"
+          },
+          "500": {
+            "description": "Erro de formatação da requisição"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Movies"],
+        "summary": "Deletar filme",
+        "description": "Excluir filme com o título passado na requisição.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "title": "O Poderoso chefão"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Exclusão feita com sucesso!"
+          },
+          "500": {
+            "description": "Erro interno relacionado ao ORM"
+          }
+        }
+      }
+    },
+    "/unrated": {
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Listar filmes não avaliados",
+        "description": "Gerar listagem de todos filmes com avalição em -1. Pode-se passar um query param com nome \"random\" e igualá-lo a true para ativar a função de retorno aleatório de um valor presente na lista.",
+        "parameters": [
+          {
+            "name": "random",
+            "in": "query",
+            "items": {
+              "type": "boolean"
+            },
+            "description": "Parâmetro não obrigatório."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista retornada com sucesso!"
+          },
+          "500": {
+            "description": "Erro de formatação da requisição"
+          }
+        }
+      }
+    }
+  }
+}

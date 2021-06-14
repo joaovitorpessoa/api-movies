@@ -120,7 +120,7 @@ class MovieController {
           moviesUnrated.length - 1 // Tamanho do array - 1, pois é o maior índice possível
         );
 
-        return response.status(200).json(moviesUnrated[randomIndexArray]); // Retorna uma entidade aleatória do array
+        return response.status(200).json([moviesUnrated[randomIndexArray]]); // Retorna uma entidade aleatória do array
       }
 
       return response.status(200).json(moviesUnrated);
