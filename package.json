@@ -31,5 +31,8 @@
     "start": "ts-node src/server.ts",
     "test": "NODE_ENV=test jest",
     "posttest": "rm ./src/database/database.test.sqlite"
+  },
+  "engines": {
+    "node": "12.11.1"
   }
 }
