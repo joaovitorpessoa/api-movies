@@ -2,7 +2,8 @@
 
 ## ☁️ Deploy
 
-- <a href="https://technic-exam-apimovies.herokuapp.com">Subi uma instância da aplicação no Heroku!</a>
+- Subi uma instância da aplicação no Heroku!
+- "https://technic-exam-apimovies.herokuapp.com"
 
 ## Documentação
 
