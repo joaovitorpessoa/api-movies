@@ -18,7 +18,7 @@
 - SQLite
 - Swagger
 
-## 🏃 Usage
+## 🏃 Uso
 
 ```bash
 git clone https://github.com/joaovitorpessoa/apimovies
