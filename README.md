@@ -1,9 +1,8 @@
-# API para cadastro de filmes (teste técnico)
+# API para cadastro de filmes
 
 ## ☁️ Deploy
 
-- Subi uma instância da aplicação no Heroku!
-- "https://technic-exam-apimovies.herokuapp.com"
+- Instância no Heroku: https://technic-exam-apimovies.herokuapp.com
 
 ## Documentação
 
