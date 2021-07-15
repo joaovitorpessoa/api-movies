@@ -20,8 +20,8 @@
 ## 🏃 Uso
 
 ```bash
-git clone https://github.com/joaovitorpessoa/apimovies
-cd apimovies
+git clone https://github.com/joaovitorpessoa/api-movies
+cd api-movies
 npm install
-yarn start
+npm start
 ```
