@@ -2,11 +2,11 @@
 
 ## ☁️ Deploy
 
-- Instância no Heroku: https://technic-exam-apimovies.herokuapp.com
+- Instância no Heroku: https://api-movies-joaovitorpessoa.herokuapp.com/
 
 ## Documentação
 
-- Documentação disponível em https://technic-exam-apimovies.herokuapp.com/api-docs
+- Documentação disponível em https://api-movies-joaovitorpessoa.herokuapp.com/api-docs/
 
 ## 🚀 Tecnologias utilizadas
 
