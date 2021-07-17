@@ -4,7 +4,7 @@
 
 - Instância no Heroku: https://api-movies-joaovitorpessoa.herokuapp.com/
 
-## Documentação
+## 📕 Documentação
 
 - Documentação disponível em https://api-movies-joaovitorpessoa.herokuapp.com/api-docs/
 
