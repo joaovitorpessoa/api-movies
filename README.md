@@ -33,16 +33,16 @@ Esse projeto tem como objetivo a construção completa de uma API utilizando div
 ## 🏃 Uso
 
 ```bash
-    // Clonar repositório
+    # Clonar repositório
     $ git clone https://github.com/joaovitorpessoa/api-movies
 
-    // Acessar diretório
+    # Acessar diretório
     $ cd api-movies
 
-    // Instalar dependências
+    # Instalar dependências
     $ yarn install
 
-    // Iniciar projeto
+    # Iniciar projeto
     $ yarn start
 ```
 
