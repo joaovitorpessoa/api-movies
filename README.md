@@ -40,10 +40,10 @@ Esse projeto tem como objetivo a construção completa de uma API utilizando div
     $ cd api-movies
 
     # Instalar dependências
-    $ yarn install
+    $ npm install
 
     # Iniciar projeto
-    $ yarn start
+    $ npm start
 ```
 
 ---
