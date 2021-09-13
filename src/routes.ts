@@ -1,21 +1,21 @@
-import { Router } from "express"; // Objeto fornecido pelo express para gerenciar rotas em arquivos separados (garantindo princípios SOLID)
-import { MovieController } from "./controllers/MovieController"; // Funções relacionadas as entidade da tabela "movies"
-import { MovieValidator } from "./validators/MovieValidator"; // Middleware de validação de input do client-side da rota /movies
+import { Router } from "express";
+import { MovieController } from "./controllers/MovieController";
+import { MovieValidator } from "./validators/MovieValidator";
 
-const routes = Router(); // Instância do objeto responsável pelas rotas da API
+const routes = Router();
 
-const movieValidator = new MovieValidator(); // Instância do validator referente a rota movies
+const movieValidator = new MovieValidator();
 
-const movieController = new MovieController(); // Instância do controller referente ao model "Movie"
+const movieController = new MovieController();
 
-routes.get("/movies", movieController.list); // Rota responsável por listar todos os filmes
+routes.get("/movies", movieController.list);
 
-routes.post("/movies", movieValidator.create, movieController.create); // Rota responsável por criar novos filmes
+routes.post("/movies", movieValidator.create, movieController.create);
 
-routes.put("/movies", movieValidator.update, movieController.update); // Rota responsável por atualizar alguma informação de um filme já existente
+routes.put("/movies", movieValidator.update, movieController.update);
 
-routes.delete("/movies", movieController.delete); // Rota responsável por deletar algum filme
+routes.delete("/movies", movieController.delete);
 
-routes.get("/unrated", movieController.listUnrated); // Rota responsável por listar filmes sem avaliação
+routes.get("/unrated", movieController.listUnrated);
 
 export { routes };
